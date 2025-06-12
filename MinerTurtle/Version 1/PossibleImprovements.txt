@@ -1,0 +1,8 @@
+* Ability to mine ore veins itself (properly scanning all possible areas ores
+can be in) and then returning to it's original position.
+
+* Automatic Smelting
+
+* Automatic Blockifying Complete ores
+
+* Turtle dedicated solely for coal distribution to multiple machinery
