@@ -29,64 +29,46 @@ forward (saves fuel)
 
 All Turtles will have a starting position, which will lead to predetermined rows
 
-All possible mines:
-    Coal Mine
-    Iron Mine
-    Gold Mine
-    Lapis Mine
-    Redstone Mine
-    Diamond Mine
+### All possible mines:
+    - Coal Mine
+    - Iron Mine
+    - Gold Mine
+    - Lapis Mine
+    - Redstone Mine
+    - Diamond Mine
 
-All ores will be capable of being picked up (except copper)
-    Vanilla ores:
-        minecraft:coal_ore
-        minecraft:deepslate_coal_ore
-        minecraft:iron_ore
-        minecraft:deepslate_iron_ore
-        --minecraft:copper_ore
-        --minecraft:deepslate_copper_ore
-        minecraft:gold_ore
-        minecraft:deepslate_gold_ore
-        minecraft:redstone_ore
-        minecraft:deepslate_redstone_ore
-        minecraft:lapis_ore
-        minecraft:deepslate_lapis_ore
-        minecraft:diamond_ore
-        minecraft:deepslate_diamond_ore
-        minecraft:emerald_ore
-        minecraft:deepslate_emerald_ore
-        --Nether specific
-        --minecraft:nether_quartz_ore
-        --minecraft:ancient_debris
-    
-    Ore drops:
-        minecraft:coal
-        minecraft:raw_iron
-        minecraft:raw_copper
-        minecraft:raw_gold
-        minecraft:redstone
-        minecraft:lapis_lazuli
-        minecraft:diamond
-        minecraft:emerald
-        --Nether specific
-        --minecraft:quartz
-        --minecraft:ancient_debris
+### All possible ores
+    | Ore Type              | Normal ID                     | Deepslate ID                      | Drop ID                   |
+    |-----------------------|-------------------------------|-----------------------------------|---------------------------|
+    | Coal                  | minecraft:coal_ore            | minecraft:deepslate_coal_ore      | minecraft:coal            |
+    | Iron                  | minecraft:iron_ore            | minecraft:deepslate_iron_ore      | minecraft:raw_iron        |
+    | Copper                | minecraft:copper_ore          | minecraft:deepslate_copper_ore    | minecraft:raw_copper      |
+    | Gold                  | minecraft:gold_ore            | minecraft:deepslate_gold_ore      | minecraft:raw_gold        |
+    | Redstone              | minecraft:redstone_ore        | minecraft:deepslate_redstone_ore  | minecraft:redstone        |
+    | Lapis                 | minecraft:lapis_ore           | minecraft:deepslate_lapis_ore     | minecraft:lapis_lazuli    |
+    | Diamond               | minecraft:diamond_ore         | minecraft:deepslate_diamond_ore   | minecraft:diamond         |
+    | Emerald               | minecraft:emerald_ore         | minecraft:deepslate_emerald_ore   | minecraft:emerald         |
+    | (N) Gold Nuggets      | FIND                          |                                   | FIND                      |
+    | (N) Quartz            | minecraft:nether_quartz_ore   |                                   | minecraft:quartz          |
+    | (N) Ancient Debris    | minecraft:ancient_debris      |                                   | minecraft:ancient_debris  |
+    | Silver                | FIND                          | FIND                              | FIND                      |
+    | Zinc                  | FIND                          | FIND                              | FIND                      |
 
-All possible position values:
-    bottom
-    bottomleft
-    bottomright
 
-    bottomforward
-    topforward
-
-    top
-    topleft
-    topright
-    
+### All possible position values:
+    | Top or Bottom Block   | Position Name     |
+    |-----------------------|-------------------|
+    | Bottom                | bottom            |
+    |                       | bottomleft        |
+    |                       | bottomright       |
+    |                       | bottomforward     |
+    | Top                   | top               |
+    |                       | topleft           |
+    |                       | topright          |
+    |                       | topforward        |
     
 
-CHRONOLOGICAL ORDER:
+## CHRONOLOGICAL ORDER PROCEDURES:
 -- SETUP PHASE
 -   Hello World!
 
