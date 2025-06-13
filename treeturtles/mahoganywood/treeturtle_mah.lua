@@ -52,8 +52,13 @@ function saplingAndBoneMealCheck()
     turtle.select(1)
     itemInHand = turtle.getItemDetail()
 	success, blockInFront = turtle.inspect()
-	print("Item: "..tostring(itemInHand.name).." and Block: "..
-			tostring(blockInFront.name))
+	if itemInHand and success then
+		print(tostring(itemInHand.name) .. " and " .. tostring(blockInFront.name))
+	elseif itemInHand then
+		print(tostring(itemInHand.name))
+	elseif success then
+		print(tostring(blockInFront.name))
+	end
     if itemInHand and itemInHand.name == "biomesoplenty:mahogany_sapling" and 
 			(not success) then
         turtle.place()
