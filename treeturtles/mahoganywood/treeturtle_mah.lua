@@ -48,32 +48,62 @@ function digTreeTop()
 end
 
 function saplingAndBoneMealCheck()
-	print("Part one of saplingAndBoneMealCheck")
+	print("Beginning: saplingAndBoneMealCheck")
     turtle.select(1)
     itemInHand = turtle.getItemDetail()
 	success, blockInFront = turtle.inspect()
-	print(itemInHand.name .. " and " blockInFront.name)
-    if itemInHand.name == "biomesoplenty:mahogany_sapling" and 
-			(not blockInFront.name == "biomesoplenty:mahogany_sapling") then
+	print("Item: "..tostring(itemInHand.name).." and Block: "..
+			tostring(blockInFront.name))
+    if itemInHand and itemInHand.name == "biomesoplenty:mahogany_sapling" and 
+			(not success) then
         turtle.place()
     end
-	print("Part one ended")
-	print("Part two started")
     turtle.select(2)
     itemInHand = turtle.getItemDetail()
     success, blockInFront = turtle.inspect()
-	print(itemInHand.name .. " and " blockInFront.name)
-    while blockInFront.name == "biomesoplenty:mahogany_sapling" and 
-			itemInHand.name == "minecraft:bone_meal" do
+	if itemInHand and success then
+		print(tostring(itemInHand.name) .. " and " .. tostring(blockInFront.name))
+	elseif itemInHand then
+		print(tostring(itemInHand.name))
+	elseif success then
+		print(tostring(blockInFront.name))
+	end
+    while itemInHand and itemInHand.name == "minecraft:bone_meal" and success and
+			blockInFront.name == "biomesoplenty:mahogany_sapling" do
 		turtle.select(2)
         turtle.place()
         turtle.select(2)
         itemInHand = turtle.getItemDetail()
 		success, blockInFront = turtle.inspect()
     end
-	print("Part two ended")
+	print("Ending: saplingAndBoneMealCheck")
 end
-        
+
+function refuelingOptions()
+	print("Beginning: refuelingOptions")
+	validFuelItems = {
+		["biomesoplenty:mahogany_log"] = true,
+		["minecraft:coal"] = true,
+		["minecraft:charcoal"] = true
+	}
+	for i = 1, 16 do
+		turtle.select(i)
+		itemInHand = turtle.getItemDetail()
+		while itemInHand and validFuelItems[itemInHand.name] and turtle.getFuelLevel() < 100 do
+			print("Refueling from: "..itemInHand.name)
+			turtle.refuel()
+			turtle.select(i)
+			itemInHand = turtle.getItemDetail()
+		end
+	end
+	if turtle.getFuelLevel() < 100 then
+		print("Not enough fuel!")
+		print("Ending: refuelingOptions")
+		return false
+	end
+	print("Ending: refuelingOptions")
+	return true
+end
 --
 
 -- Dig If's
@@ -115,8 +145,11 @@ end
 
 -- Main Method
 while true do
+	if not refuelingOptions() then
+		break
+	end
     success, blockInFront = turtle.inspect()
-    if blockInFront.name == "biomesoplenty:mahogany_log" then
+    if success and blockInFront.name == "biomesoplenty:mahogany_log" then
         digForwardIf()
         turtle.forward()
         -- Goes under the tree
@@ -137,10 +170,11 @@ while true do
 
         saplingAndBoneMealCheck()
 		-- Sapling and Bonemeal check
-    else if blockInFront.name == "biomesoplenty:mahogany_sapling"
+    elseif blockInFront.name == "biomesoplenty:mahogany_sapling" or 
+			success == false then
         saplingAndBoneMealCheck()
 		-- If sapling, not log, in front, do saplingAndBoneMealCheck
     end
     os.sleep(5)
 end
-
+print("Powering down")
