@@ -48,19 +48,30 @@ function digTreeTop()
 end
 
 function saplingAndBoneMealCheck()
+	print("Part one of saplingAndBoneMealCheck")
     turtle.select(1)
-    item = turtle.getItemDetail()
-    if item.name == "biomesoplenty:mahogany_sapling" then
+    itemInHand = turtle.getItemDetail()
+	success, blockInFront = turtle.inspect()
+	print(itemInHand.name .. " and " blockInFront.name)
+    if itemInHand.name == "biomesoplenty:mahogany_sapling" and 
+			(not blockInFront.name == "biomesoplenty:mahogany_sapling") then
         turtle.place()
     end
+	print("Part one ended")
+	print("Part two started")
     turtle.select(2)
-    item = turtle.getItemDetail()
-    success, itemInFront = turtle.inspect()
-    while (not itemInFront == "biomesoplenty:mahogany_log") and item.name == "minecraft:bone_meal" do
-            turtle.place()
-            turtle.select(2)
-            item = turtle.getItemDetail()
+    itemInHand = turtle.getItemDetail()
+    success, blockInFront = turtle.inspect()
+	print(itemInHand.name .. " and " blockInFront.name)
+    while blockInFront.name == "biomesoplenty:mahogany_sapling" and 
+			itemInHand.name == "minecraft:bone_meal" do
+		turtle.select(2)
+        turtle.place()
+        turtle.select(2)
+        itemInHand = turtle.getItemDetail()
+		success, blockInFront = turtle.inspect()
     end
+	print("Part two ended")
 end
         
 --
@@ -93,28 +104,6 @@ end
 
 --
 
--- Dig If IF WOOD's
-
--- function digUpIf()
---     if turtle.inspectUp() ==  then
---         turtle.digUp()
---     end
--- end
-
--- function digDownIf()
---     if turtle.detectDown() then
---         turtle.digDown()
---     end
--- end
-
--- function digForwardIf()
---     if turtle.detect() then
---         turtle.dig()
---     end
--- end
-
---
-
 -- Full Turn
 
 function fullTurn()
@@ -126,25 +115,31 @@ end
 
 -- Main Method
 while true do
-    success, itemInFront = turtle.inspect()
-    if itemInFront.name == "biomesoplenty:mahogany_log" then
+    success, blockInFront = turtle.inspect()
+    if blockInFront.name == "biomesoplenty:mahogany_log" then
         digForwardIf()
         turtle.forward()
         -- Goes under the tree
 
         digTrunk()
         digTreeTop()
+		-- Tree chopping
 
         while not turtle.detectDown() do
             turtle.down()
         end
+		-- Returning to base
 
         fullTurn()
         turtle.forward()
         fullTurn()
+		-- Facing original starting position
+
         saplingAndBoneMealCheck()
-    else
+		-- Sapling and Bonemeal check
+    else if blockInFront.name == "biomesoplenty:mahogany_sapling"
         saplingAndBoneMealCheck()
+		-- If sapling, not log, in front, do saplingAndBoneMealCheck
     end
     os.sleep(5)
 end
