@@ -46,6 +46,23 @@ function digTreeTop()
         turtle.turnLeft()
     end
 end
+
+function saplingAndBoneMealCheck()
+    turtle.select(1)
+    item = turtle.getItemDetail()
+    if item.name == "biomesoplenty:mahogany_sapling" then
+        turtle.place()
+    end
+    turtle.select(2)
+    item = turtle.getItemDetail()
+    success, itemInFront = turtle.inspect()
+    while (not itemInFront == "biomesoplenty:mahogany_log") and item.name == "minecraft:bone_meal" do
+            turtle.place()
+            turtle.select(2)
+            item = turtle.getItemDetail()
+    end
+end
+        
 --
 
 -- Dig If's
@@ -109,18 +126,26 @@ end
 
 -- Main Method
 while true do
-    digForwardIf()
-    turtle.forward()
-	-- Goes under the tree
+    success, itemInFront = turtle.inspect()
+    if itemInFront.name == "biomesoplenty:mahogany_log" then
+        digForwardIf()
+        turtle.forward()
+        -- Goes under the tree
 
-    digTrunk()
-    digTreeTop()
+        digTrunk()
+        digTreeTop()
 
-    while not turtle.detectDown() do
-        turtle.down()
+        while not turtle.detectDown() do
+            turtle.down()
+        end
+
+        fullTurn()
+        turtle.forward()
+        fullTurn()
+        saplingAndBoneMealCheck()
+    else
+        saplingAndBoneMealCheck()
     end
-
-    fullTurn()
-    turtle.forward()
-    fullTurn()
+    os.sleep(5)
 end
+
