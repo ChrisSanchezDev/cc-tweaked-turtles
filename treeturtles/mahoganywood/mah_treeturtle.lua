@@ -1,5 +1,9 @@
 -- TreeTurtle
+
 -- biomesoplenty:mahogany_log
+-- biomesoplenty:mahogany_sapling
+-- biomesoplenty:mahogany_leaves
+
 -- Main Tree Cutting Functions
 function digTrunk()
     level = 0

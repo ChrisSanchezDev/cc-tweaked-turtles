@@ -1,33 +1,4 @@
-The goal of this MinerTurtle_v1 is to strip mine in a 2 tall x 100 long 
-(to start) strip mine.
-The idea is that the turtle will be able to identify all blocks to the
-below, bottomleft, and bottomright of it one it's first go around on the bottom. 
-Then on it's return, it'll scan the top, topleft, and topright blocks.
-
-* We will start with 100 blocks so we don't have to go far if it messes up on
-the first tries. Additionally
-
-
-Things to note:
-* Let's start simple, allow it to take a snapshot when it does scan something.
-^This snapshot will contain:
-    - Strip Mine name
-    - Ore name
-    - [x, z] cords of spot
-    - Location of spot (Top, topleft, topright, bottom, bottomleft, bottomright)
-    - newLine
-These will all be sent to a main computer which will hold all of it in a txt
-file called MM:DD HH:MM MinerTurtle_v1 (#). # is based on the total amount ever
-done by that turtle.
-
-It will mine, deposit, refuel itself to get atleast 500 fuel if it contains coal.
-(If it doesnt contain enough coal, allow it to retrieve it from a dedicated chest)
-(^This chest will also be given coal if there is extra)
-
-Account for possible cave openings. Simply continue forward if it cannot dig
-forward (saves fuel)
-
-All Turtles will have a starting position, which will lead to predetermined rows
+## Miner Turtle
 
 ### All possible mines:
     - Coal Mine
@@ -156,4 +127,15 @@ All Turtles will have a starting position, which will lead to predetermined rows
     there is no coal in that chest either, it will return to it's starting 
     position and print a no-coal message. 
 
--   Fin!
+-   Goodbye World!
+
+### Possible Improvements
+
+-   Ability to mine ore veins itself (properly scanning all possible areas ores
+    can be in) and then returning to it's original position.
+
+-   Automatic Smelting
+
+-   Automatic Blockifying Complete ores
+
+-   Turtle dedicated solely for coal distribution to multiple machinery

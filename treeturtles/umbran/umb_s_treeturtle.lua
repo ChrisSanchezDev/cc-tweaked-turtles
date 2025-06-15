@@ -1,4 +1,4 @@
--- treeturtle_umb_s.lua
+-- umb_s_treeturtle.lua
 
 -- biomesoplenty:umbran_log
 -- biomesoplenty:umbran_sapling
