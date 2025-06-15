@@ -137,6 +137,7 @@
 
 -   Ability to mine ore veins itself (properly scanning all possible areas ores
     can be in) and then returning to it's original position.
+-   ^Possible to have a GUI interface through Three.js
 
 -   Automatic Smelting
 
