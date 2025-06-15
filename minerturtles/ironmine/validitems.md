@@ -38,6 +38,7 @@ validScannableOres = {
 }
 
 minecraft:coal
+minecraft:charcoal
 
 oresToStore = {
     ["minecraft:raw_iron"] = true,
