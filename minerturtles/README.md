@@ -28,16 +28,16 @@
 
 
 ### All possible position values:
-    | Top or Bottom Block   | Position Name     |
-    |-----------------------|-------------------|
-    | Bottom                | bottom            |
-    |                       | bottomleft        |
-    |                       | bottomright       |
-    |                       | bottomforward     |
-    | Top                   | top               |
-    |                       | topleft           |
-    |                       | topright          |
-    |                       | topforward        |
+| Top or Bottom Block   | Position Name     |
+|-----------------------|-------------------|
+| Bottom                | bottom            |
+|                       | bottomleft        |
+|                       | bottomright       |
+|                       | bottomforward     |
+| Top                   | top               |
+|                       | topleft           |
+|                       | topright          |
+|                       | topforward        |
     
 
 
