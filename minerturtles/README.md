@@ -39,7 +39,8 @@
     |                       | topforward        |
     
 
-## CHRONOLOGICAL ORDER PROCEDURES:
+
+## Procedures:
 -- SETUP PHASE
 -   Hello World!
 
@@ -129,7 +130,9 @@
 
 -   Goodbye World!
 
-### Possible Improvements
+
+
+### Possible Improvements:
 
 -   Ability to mine ore veins itself (properly scanning all possible areas ores
     can be in) and then returning to it's original position.
