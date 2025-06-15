@@ -9,6 +9,7 @@
     - Diamond Mine
 
 ### All possible ores:
+
     | Ore Type              | Normal ID                     | Deepslate ID                      | Drop ID                   |
     |-----------------------|-------------------------------|-----------------------------------|---------------------------|
     | Coal                  | minecraft:coal_ore            | minecraft:deepslate_coal_ore      | minecraft:coal            |
