@@ -27,6 +27,22 @@
 | (N) Ancient Debris    | minecraft:ancient_debris      |                                   | minecraft:ancient_debris  |
 | Silver                | iceandfire:silver_ore         |                                   | iceandfire:silver_ore     |
 | Zinc                  | create:zinc_ore               | create:deepslate_zinc_ore         | create:raw_zinc           |
+### All possible ores:
+    | Ore Type              | Normal ID                     | Deepslate ID                      | Drop ID                   |
+    |-----------------------|-------------------------------|-----------------------------------|---------------------------|
+    | Coal                  | minecraft:coal_ore            | minecraft:deepslate_coal_ore      | minecraft:coal            |
+    | Iron                  | minecraft:iron_ore            | minecraft:deepslate_iron_ore      | minecraft:raw_iron        |
+    | Copper                | minecraft:copper_ore          | minecraft:deepslate_copper_ore    | minecraft:raw_copper      |
+    | Gold                  | minecraft:gold_ore            | minecraft:deepslate_gold_ore      | minecraft:raw_gold        |
+    | Redstone              | minecraft:redstone_ore        | minecraft:deepslate_redstone_ore  | minecraft:redstone        |
+    | Lapis                 | minecraft:lapis_ore           | minecraft:deepslate_lapis_ore     | minecraft:lapis_lazuli    |
+    | Diamond               | minecraft:diamond_ore         | minecraft:deepslate_diamond_ore   | minecraft:diamond         |
+    | Emerald               | minecraft:emerald_ore         | minecraft:deepslate_emerald_ore   | minecraft:emerald         |
+    | (N) Gold Nuggets      | FIND                          |                                   | FIND                      |
+    | (N) Quartz            | minecraft:nether_quartz_ore   |                                   | minecraft:quartz          |
+    | (N) Ancient Debris    | minecraft:ancient_debris      |                                   | minecraft:ancient_debris  |
+    | Silver                | FIND                          | FIND                              | FIND                      |
+    | Zinc                  | FIND                          | FIND                              | FIND                      |
 
 
 ### All possible position values:
@@ -42,14 +58,8 @@
 |                       | topforward        |
     
 
-<<<<<<< HEAD
 ## CHRONOLOGICAL ORDER PROCEDURES:
 ### SETUP PHASE
-=======
-
-## Procedures:
--- SETUP PHASE
->>>>>>> origin/main
 -   Hello World!
 
 -   Turtle is given a start command from a computer or interaction. A file will
@@ -138,11 +148,7 @@
 
 -   Goodbye World!
 
-<<<<<<< HEAD
 ## Notes
-=======
-
->>>>>>> origin/main
 
 ### Possible Improvements:
 
@@ -155,7 +161,6 @@
 -   Automatic Blockifying Complete ores
 
 -   Turtle dedicated solely for coal distribution to multiple machinery
-<<<<<<< HEAD
 
 ### Developer Notes:
 
@@ -163,5 +168,3 @@
 -   I looked into how I can get wireless communication from a main computer to a external turtle. Honestly the best
     option is attaching a ender modem to the starting position of a turtle. Advanced turtles have wireless modems
     built-in but the issue is that.
-=======
->>>>>>> origin/main
