@@ -1,4 +1,6 @@
-## Miner Turtle
+# minerturtles
+
+## Values to keep in mind
 
 ### All possible mines:
     - Coal Mine
@@ -8,7 +10,7 @@
     - Redstone Mine
     - Diamond Mine
 
-### All possible ores
+### All possible ores:
     | Ore Type              | Normal ID                     | Deepslate ID                      | Drop ID                   |
     |-----------------------|-------------------------------|-----------------------------------|---------------------------|
     | Coal                  | minecraft:coal_ore            | minecraft:deepslate_coal_ore      | minecraft:coal            |
@@ -40,7 +42,7 @@
     
 
 ## CHRONOLOGICAL ORDER PROCEDURES:
--- SETUP PHASE
+### SETUP PHASE
 -   Hello World!
 
 -   Turtle is given a start command from a computer or interaction. A file will
@@ -75,7 +77,7 @@
 
 -   The turtle will send a GPS cord to MinePC for proper return arrivals.
 
--- MINING PHASE
+### MINING PHASE
 -   The turtle will turn towards the wall and begin mining 100 blocks down.
 
 -   As the turtle mines on the bottom level first. It first checks the block in
@@ -111,7 +113,7 @@
     topleft, and topright. Continue to 100 and then have the robot look for the
     original opening GPS cord.
 
--- RETRIVAL PHASE
+### RETRIVAL PHASE
 -   The turtle will now move towards the outside of it's row and begin moving
     towards three types of chests. The bottom one will contain stonish blocks, 
     top will contain ores (except coal), and ones moved away will
@@ -129,7 +131,9 @@
 
 -   Goodbye World!
 
-### Possible Improvements
+## Notes
+
+### Possible Improvements:
 
 -   Ability to mine ore veins itself (properly scanning all possible areas ores
     can be in) and then returning to it's original position.
@@ -139,3 +143,10 @@
 -   Automatic Blockifying Complete ores
 
 -   Turtle dedicated solely for coal distribution to multiple machinery
+
+### Developer Notes:
+
+    (6/19/25)
+-   I looked into how I can get wireless communication from a main computer to a external turtle. Honestly the best
+    option is attaching a ender modem to the starting position of a turtle. Advanced turtles have wireless modems
+    built-in but the issue is that.
