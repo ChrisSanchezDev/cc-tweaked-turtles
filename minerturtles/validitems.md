@@ -58,3 +58,35 @@ validFuelItems = {
 	["minecraft:charcoal"] = true
 }
 
+
+ironm_diamondm_validScannableOres = {
+    ["minecraft:coal_ore"] = true,
+    ["minecraft:deepslate_coal_ore"] = true,
+    ["minecraft:iron_ore"] = true,
+    ["minecraft:deepslate_iron_ore"] = true,
+    ["minecraft:gold_ore"] = true,
+    ["minecraft:deepslate_gold_ore"] = true,
+    ["minecraft:redstone_ore"] = true,
+    ["minecraft:deepslate_redstone_ore"] = true,
+    ["minecraft:lapis_ore"] = true,
+    ["minecraft:deepslate_lapis_ore"] = true,
+    ["minecraft:diamond_ore"] = true,
+    ["minecraft:deepslate_diamond_ore"] = true,
+    ["minecraft:emerald_ore"] = true,
+    ["minecraft:deepslate_emerald_ore"] = true,
+    ["iceandfire:silver_ore"] = true,
+    ["create:zinc_ore"] = true,
+    ["create:deepslate_zinc_ore"] = true
+}
+
+ironm_diamondm_oresToStore = {
+    ["minecraft:raw_iron"] = true,
+    ["minecraft:raw_copper"] = true,
+    ["minecraft:raw_gold"] = true,
+    ["minecraft:redstone"] = true,
+    ["minecraft:lapis_lazuli"] = true,
+    ["minecraft:diamond"] = true,
+    ["minecraft:emerald"] = true,
+    ["iceandfire:silver_ore"] = true,
+    ["create:raw_zinc"] = true
+}
